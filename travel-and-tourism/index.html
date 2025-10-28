@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complete Responsive Tour and Travel Agency Website</title>
+    <title>Complete Responsive Tour and Travel Agency Website degine</title>
+    <link rel="icon" href="/public-travel-logo.jpg" type="image/jpeg">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -25,8 +26,29 @@
         <div class="icons">
             <a href="#search"><i class="fas fa-search" id="search-btn"></i></a>
             <a href="#login"><i class="fas fa-user" id="login-btn"></i></a>
+            <!-- Right-side hamburger for navigation -->
+            <button class="hamburger-right" aria-label="Open navigation"><i class="fas fa-bars"></i></button>
         </div>
-    </header> 
+
+        <!-- Search Bar Container moved inside header so header .search-bar-container CSS applies -->
+        <div class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="Search here...">
+            <label for="search-bar"><i class="fas fa-search"></i></label>
+        </div>
+    </header>
+
+    <!-- Drawer nav (keeps header nav visible while providing a left drawer) -->
+    <nav class="navbar-drawer" aria-label="drawer navigation">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#packages">Packages</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#review">Review</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <!-- Overlay used to dim and close navbar drawer -->
+    <div class="nav-overlay" aria-hidden="true"></div>
     <!-- Login Form Container -->
     <div class="login-form-container">
         <i class="fas fa-times" id="form-close"></i>
@@ -49,17 +71,18 @@
             <a href="#" class="btn" id="discoverbtn">Discover More</a>
         </div>
         <div class="controls">
-            <span class="vid-btn active" data-src="./src/assets/video/video-1.mp4"></span>
+            <span class="vid-btn" data-src="./src/assets/video/video-1.mp4"></span>
             <span class="vid-btn" data-src="./src/assets/video/video-2.mp4"></span>
             <span class="vid-btn" data-src="./src/assets/video/video-3.mp4"></span>
             <span class="vid-btn" data-src="./src/assets/video/video-4.mp4"></span>
             <span class="vid-btn" data-src="./src/assets/video/video-5.mp4"></span>
+            <span class="vid-btn" data-src="./src/assets/video/video-6.mp4"></span>
         </div>
         <div class="video-container">
-            <video src="./src/assets/video/video-1.mp4" id="video-slider" loop autoplay muted></video>
-        </div>
-        <div class="video-container">
-            <video src="./src/assets/video/video-1.mp4" id="video-slider" loop autoplay muted></video>
+            <video src="./src/assets/video/video-2.mp4" id="video-slider" loop autoplay muted></video>
+            
+            <button class="video-nav video-prev" aria-label="Previous video">&#10094;</button>
+            <button class="video-nav video-next" aria-label="Next video">&#10095;</button>
         </div>
 
         
@@ -315,32 +338,32 @@
             <div class="box">
                 <i class="fas fa-hotel"></i>
                 <h3>Affordable Hotels</h3>
-                <p>Stay in comfortable, budget-friendly hotels with all essential amenities.Find cozy rooms, friendly service, and convenient locations without breaking the bank.”</p>
+                <p>Stay in comfortable, budget-friendly hotels with all essential amenities.Find cozy rooms, friendly service, and convenient locations without breaking the bank.</p>
             </div>
             <div class="box">
                 <i class="fas fa-utensils"></i>
                 <h3>Food and Drinks</h3>
-                <p>“Enjoy delicious meals, local cuisine, and refreshing beverages during your trip.Savor authentic flavors and discover unique dishes that reflect the culture of each destination.”</p>
+                <p>Enjoy delicious meals, local cuisine, and refreshing beverages during your trip.Savor authentic flavors and discover unique dishes that reflect the culture of each destination.</p>
             </div>
             <div class="box">
                 <i class="fas fa-bullhorn"></i>
                 <h3>Safety Guide</h3>
-                <p>“Get expert safety tips and guidance to travel securely and confidently.Learn how to stay alert, avoid common risks, and protect your belongings on the go.”</p>
+                <p>Get expert safety tips and guidance to travel securely and confidently.Learn how to stay alert, avoid common risks, and protect your belongings on the go.</p>
             </div>
             <div class="box">
                 <i class="fas fa-globe-asia"></i>
                 <h3>Around the World</h3>
-                <p>“Explore popular destinations and experience cultures across the globe.Discover breathtaking landmarks, hidden gems, and unforgettable experiences everywhere you travel.”</p>
+                <p>Explore popular destinations and experience cultures across the globe.Discover breathtaking landmarks, hidden gems, and unforgettable experiences everywhere you travel.</p>
             </div>
             <div class="box">
                 <i class="fas fa-plane"></i>
                 <h3>Fastest Travel</h3>
-                <p>“Reach your destinations quickly with our optimized travel plans.Save time and energy with the most efficient routes, transport options, and travel hacks.”</p>
+                <p>Reach your destinations quickly with our optimized travel plans.Save time and energy with the most efficient routes, transport options, and travel hacks.</p>
             </div>
             <div class="box">
                 <i class="fas fa-hiking"></i>
                 <h3>Adventures</h3>
-                <p>“Embark on exciting adventures like trekking, hiking, and water sports.Challenge yourself, embrace nature, and create memories that last a lifetime.”</p>
+                <p>Embark on exciting adventures like trekking, hiking, and water sports.Challenge yourself, embrace nature, and create memories that last a lifetime.</p>
             </div>
         </div>
     </section>
@@ -494,6 +517,30 @@
                     <a href="#" class="btn">See More</a>
                 </div>
             </div>
+            <div class="box">
+                <img src="./src/assets/images/gallery-19.jpg" alt="Amazing place 17">
+                <div class="content">
+                    <h3>Amazing Places</h3>
+                    <p>🛕Pashupatinath Temple, located on the banks of the Bagmati River in Kathmandu, is a sacred Hindu temple dedicated to Lord Shiva. Known for its golden roof and intricate architecture, it stands as a symbol of Nepal’s rich spiritual and cultural heritage.</p>
+                    <a href="#" class="btn">See More</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./src/assets/images/gallery-20.jpg" alt="Amazing place 17">
+                <div class="content">
+                    <h3>Amazing Places</h3>
+                    <p>🛕Manakamana Temple, dedicated to Goddess Bhagwati, sits atop a hill in Gorkha, Nepal. Known as the wish-fulfilling temple, it offers stunning Himalayan views and is reached by a scenic cable car ride.</p>
+                    <a href="#" class="btn">See More</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./src/assets/images/gallery-21.jpg" alt="Amazing place 17">
+                <div class="content">
+                    <h3>Amazing Places</h3>
+                    <p>🛕Muktinath Temple, dedicated to Lord Vishnu, lies in Nepal’s Mustang region. Revered by Hindus and Buddhists, it symbolizes liberation and is famed for its 108 water spouts and eternal flame.</p>
+                    <a href="#" class="btn">See More</a>
+                </div>
+            </div>
         </div>
     </section>
     <!-- Review Section Starts -->
@@ -548,7 +595,7 @@
                 <div class="swiper-slide">
                     <div class="box">
                         <img src="./src/assets/images/review-4.jpg" alt="Reviewer 4">
-                        <h3>Mr.Shrawan Mandal</h3>
+                        <h3>Mr.Bed Prakash Maurya</h3>
                         <p>Australia is famous for its beaches, wildlife, and fun activities like surfing and snorkeling. Cities like Sydney and Melbourne offer culture, food, and festivals. Natural wonders like the Great Barrier Reef and Uluru attract travelers from all over the world.</p>
                         <div class="stars">
                             <i class="fas fa-star"></i>
@@ -573,9 +620,43 @@
                         </div>
                     </div>
                 </div>
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="./src/assets/images/review-6.jpg" alt="Reviewer 5">
+                        <h3>Mr.Dinesh Maurya</h3>
+                        <p>The USA is famous for its iconic monuments, national parks, and advanced technology. Cities like New York and Washington, D.C. offer a mix of modern life and historical culture, while landmarks like the Grand Canyon and Statue of Liberty attract visitors from around the world.</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </section>
+    <!--About section starts-->
+    <section class="about" id="about">
+        <h1 class="heading">
+            <span>a</span><span>b</span><span>o</span><span>u</span><span>t</span>
+        </h1>
+        <div class="row">
+            <div class="image">
+                <img src="./src/assets/images/about-img.jpg" alt="About us illustration">
+            </div>
+            <div class="content">
+                <h1>Why Choose About Us?</h1>
+                <p><h2>We are a dedicated and hardworking team committed to delivering the best services and innovative solutions to our clients. Our focus is on excellence, efficiency, and trust. Every project we undertake is driven by our passion to simplify complex tasks, provide meaningful value, and ensure complete customer satisfaction.</h2></p>
+                <p><h2>Our mission is to make everything easy, useful, and reliable for everyone we serve. Through continuous improvement, teamwork, and integrity, we strive to build lasting relationships and contribute positively to the success of our clients and the community.</h2></p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </div>
+    </section>
+    <!-- About Section Ends -->
+
     <!-- Contact Section Starts -->
     <section class="contact" id="contact">
         <h1 class="heading">
@@ -600,7 +681,10 @@
         </div>
     </section>
     <!-- Brand Section Starts -->
-    <section class="brand-container">
+    <section class="brand-container" id="brand">
+        <h1 class="heading">
+            <span>b</span><span>r</span><span>a</span><span>n</span><span>d</span>
+        </h1>
         <div class="swiper-container brand-slider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="./src/assets/images/brand-1.jpg" alt="Brand 1 logo"></div>
@@ -617,15 +701,19 @@
         <div class="box-container">
             <div class="box">
                 <h3>About Us</h3>
-                <p>We are a hardworking team focused on giving the best services and solutions.Our aim is to make everything easy, useful, and trustworthy for all.</p>
+                <p>We are a dedicated and hardworking team committed to delivering the best services and innovative solutions to our clients. Our focus is on excellence, efficiency, and trust. Every project we undertake is driven by our passion to simplify complex tasks, provide meaningful value, and ensure customer satisfaction.Our mission is to make everything easy, useful, and reliable for everyone we serve. Through continuous improvement, teamwork, and integrity, we strive to build lasting relationships and contribute positively to the success of our clients and the community.</p>
             </div>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
             <div class="box">
                 <h3>Branch Locations</h3>
-                <a href="#">India</a>
-                <a href="#">USA</a>
-                <a href="#">Japan</a>
-                <a href="#">France</a>
-            </div>
+                <a href="#"><img src="https://flagcdn.com/w20/in.png" alt="India flag"> India</a>
+                <a href="#"><img src="https://flagcdn.com/w20/us.png" alt="USA flag"> USA</a>
+                <a href="#"><img src="https://flagcdn.com/w20/jp.png" alt="Japan flag"> Japan</a>
+                <a href="#"><img src="https://flagcdn.com/w20/fr.png" alt="France flag"> France</a>
+                <a href="#"><img src="https://flagcdn.com/w20/ca.png" alt="Canada flag"> Canada</a>
+                <a href="#"><img src="https://flagcdn.com/w20/au.png" alt="Australia flag"> Australia</a>
+            </div>      
             <div class="box">
                 <h3>Quick Links</h3>
                 <a href="#home">Home</a>
@@ -636,16 +724,48 @@
                 <a href="#review">Review</a>
                 <a href="#contact">Contact</a>
             </div>
-            <div class="box">
-                <h3>Follow Us</h3>
-                <a href="www.facebook.com">Facebook</a>
-                <a href="www.instagram.com">Instagram</a>
-                <a href="www.x.com">Twitter</a>
-                <a href="www.linkedin.com/in">LinkedIn</a>
+           
+            
+
+            <!-- Add this in your <head> section once -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+            <div class="box follow-us-box">
+            <h3>Follow Us</h3>
+            <div class="follow-us-inline">
+                <a href="https://www.facebook.com" target="_blank" class="facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    <span class="social-name">Facebook</span>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span class="social-name">Instagram</span>
+                </a>
+                <a href="https://x.com" target="_blank" class="twitter">
+                    <i class="fab fa-x-twitter"></i>
+                    <span class="social-name">Twitter</span>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" class="linkedin">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span class="social-name">LinkedIn</span>
+                </a>
+                <a href="https://www.youtube.com" target="_blank" class="youtube">
+                    <i class="fab fa-youtube"></i>
+                    <span class="social-name">YouTube</span>
+                </a>
+            <!-- Inline contact info (phone + email) -->
+                <div class="footer-contact">
+                    <a href="tel:+91-7822929451" class="phone"><i class="fas fa-phone"></i><span>+91 782 292 9451</span></a>
+                    <a href="mailto:info@example.com" class="email"><i class="fas fa-envelope"></i><span>info@example.com</span></a>
+                </div>
             </div>
+            </div>
+        
+
         </div>
+        
         <h1 class="credit">
-  Created by <span>Mr. Ram Manohar Maurya, Ms.Sanjiti Gill, Ms.Neelakshi Nandan, and Ms.Sejal Jain</span> | All Rights Reserved!</h1>
+        Created by <span>Mr. Ram Manohar Maurya, Ms.Sanjiti Gill, Ms.Neelakshi Nandan, and Ms.Sejal Jain</span> | All Rights Reserved!</h1>
 
     </section>
     <!-- Scripts -->
